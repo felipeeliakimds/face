@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carinha Tecnológica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="face">
+            <div class="eye left-eye"></div>
+            <div class="eye right-eye"></div>
+        </div>
+    </div>
+
+    <script>
+        setInterval(() => {
+            document.querySelectorAll('.eye').forEach(eye => {
+                eye.classList.add('blink');
+            });
+            setTimeout(() => {
+                document.querySelectorAll('.eye').forEach(eye => {
+                    eye.classList.remove('blink');
+                });
+            }, 200);
+        }, 3000);
+    </script>
+</body>
+</html>
